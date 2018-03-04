@@ -5,8 +5,46 @@ addloadEvent(highLightPage);
 //addloadEvent(prepareGallery);
 //addloadEvent(stripeTables);
 //addloadEvent(highLightRows);
-addloadEvent(prepareForms);
+//addloadEvent(prepareForms);
 
+$(function(){
+  $("#name").focus(function(){
+    var placeholder = $(this).attr("placeholder");
+    if(placeholder == "Your name"){
+      $(this).attr("placeholder","");
+    }
+  });
+  $("#name").blur(function(){
+    var placeholder = $(this).attr("placeholder");
+    if(placeholder == ""){
+      $(this).attr("placeholder","Your name");
+    }
+  });
+  $("#email").focus(function(){
+    var placeholder = $(this).attr("placeholder");
+    if(placeholder == "Your email address"){
+      $(this).attr("placeholder","");
+    }
+  });
+  $("#email").blur(function(){
+    var placeholder = $(this).attr("placeholder");
+    if(placeholder == ""){
+      $(this).attr("placeholder","Your email address");
+    }
+  });
+  $("#message").focus(function(){
+    var placeholder = $(this).attr("placeholder");
+    if(placeholder == "Write your message here"){
+      $(this).attr("placeholder","");
+    }
+  });
+  $("#message").blur(function(){
+    var placeholder = $(this).attr("placeholder");
+    if(placeholder == ""){
+      $(this).attr("placeholder","Write your message here");
+    }
+  });
+})
 
 
 function highLightPage(){
